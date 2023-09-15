@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
+
+header {
+	width: 100%;
+	height: 25rem;
+	background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../Multimedia/banner2.jpg");
+	background-size: cover;
+	background-position: 50%;
+	padding-top: 10rem;
+
+}
+
+header nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.6rem;
+	color: #fff;
+	padding: 1rem;
+	position: fixed;
+	top: 0;
+	margin-bottom: 20rem;
+	animation: header 0.6s forwards;
+	opacity: 0;
+	animation-delay: 1s;
+	z-index: 99;
+	transition: 0.3s;
+}
+
+header nav .nav_container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	visibility: hidden;
+	font-size: 1rem;
+}
+
+header nav .nav_container ul {
+	height: 100%;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2rem;
+	background: #03989e;
+	padding: 0;
+	text-align: center;
+	position: relative;
+	transform: translateX(-100%);
+	transition: 0.3s;
+}
+
+header nav .nav_container ul .bi-x {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	color: #fff;
+}
+
+header nav .nav_container ul li {
+	list-style: none;
+}
+
+header nav .nav_container ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+header nav .nav_container .menu_visible {
+	transform: translateX(0%);
+}
+
+header nav .cart_container {
+	font-size: 1rem;
+}
+
+header .logo_container {
+	display: flex;
+	justify-content: center;
+}
+
+header .logo_container img {
+	width: 8rem;
+}
+
+header .container_carac {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	color: #fff;
+	animation: carac 0.8s forwards;
+	opacity: 0;
+	animation-delay: 1.3s;
+}
+
+header .container_carac h1 {
+	font-size: 1.2rem;
+	color: #03989e;
+	font-weight: bold;
+}
+
+header .container_carac p {
+	width: 55%;
+	margin: 0.6rem auto;
+	font-size: 1rem;
+}
+
+header .container_carac i {
+	margin-top: 6rem;
+	font-size: 0.8rem;
+	animation: arrow 0.8s forwards;
+	opacity: 0;
+	animation-delay: 1.6s;
+}
+
+@media (min-width: 767px) {
+	header {
+		height: 28rem;
+		padding-top: 6rem;
+	}
+
+	header nav {
+		padding: 1rem 2rem;
+		font-size: 0.8rem;
+	}
+
+	header nav .bi-gear-fill {
+		font-size: 1.2rem;
+	}
+
+	header nav .nav_container_md ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.8rem;
+		background: #03989e;
+		padding: 0.4rem 1rem;
+		margin-bottom: 0;
+		border-radius: 2rem;
+		font-size: 0.6rem;
+	}
+
+	header nav .nav_container_md ul li {
+		list-style: none;
+	}
+
+	header nav .nav_container_md ul li a {
+		font-size: 0.9rem;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	header .container_carac {
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		text-align: center;
+		color: #fff;
+	}
+
+	header .container_carac img {
+		width: 5rem;
+		transform: scale(0);
+		animation: carac_image 1s forwards;
+		animation-delay: 1.4s;
+	}
+
+	header .container_carac h1 {
+		margin-top: 0.8rem;
+		font-size: 1.3rem;
+		color: #03989e;
+		font-weight: bold;
+	}
+
+	header .container_carac p {
+		width: 28%;
+		margin: -4.4rem auto;
+		font-size: 1rem;
+	}
+
+	header .container_carac i {
+		margin-top: 5.5rem;
+		font-size: 0.8rem;
+	}
+}
+
+@media (min-width: 989px) {
+	header {
+		height: 38rem;
+		background-attachment: fixed;
+		padding-top: 7rem;
+	}
+
+	header nav .bi-gear-fill {
+		font-size: 1.5rem;
+		cursor: pointer;
+	}
+
+	header nav .nav_container_md ul {
+		padding: 0.6rem 1.2rem;
+		font-size: 0.8rem;
+	}
+
+	header nav .nav_container_md ul li {
+		list-style: none;
+	}
+
+	header nav .nav_container_md ul li a {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	header nav .cart_container {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		font-size: 1.5rem;
+		cursor: pointer;
+	}
+
+	header .container_carac {
+		margin-top: 4rem;
+	}
+
+	header .container_carac img {
+		width: 8rem;
+	}
+
+	header .container_carac h1 {
+		margin-top: 0.8rem;
+		font-size: 2rem;
+	}
+
+	header .container_carac p {
+		width: 21%;
+		font-size: 1.8rem;
+	}
+
+	header .container_carac i {
+		margin-top: 7rem;
+		font-size: 1.2rem;
+		cursor: pointer;
+	}
+}
+
+@keyframes header {
+	from {
+		opacity: 0;
+		transform: translateX(30%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+@keyframes carac {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes carac_image {
+	from {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes arrow {
+	from {
+		opacity: 0;
+		transform: translateY(-200%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.basicService_information, .executiveService_information{
+    display: flex;
+  }
+  .description{
+    color: #fff;
+    margin-left: 20%;
+    text-align: center;
+    font-size:large;
+  }
+  .description_executive{
+    color: #fff;
+    margin-left: 4%;
+    text-align: justify;
+    font-size:large;
+  }
+  .basicService{
+    height: 40rem;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    width: 40%;
+  }
+  .executiveService{
+    height: 40rem;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 12rem;
+    width: 40%;
+  }
+  
+  .galleryPic {
+    background-color: #fff;
+    border: 2px solid #03989e;
+    padding: 10px 10px 32px;
+    box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .galleryPic>img{
+    min-width: 100%;
+    min-height: 90%;
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 10px;
+    
+  }
+  .Rotate {
+    transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(10deg);
+  }
+  .executiveOne{
+    transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(10deg);
+  
+  }
+  .RotateLeft {
+    transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(10deg);
+  }
+  .RotateRight {
+    transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(-10deg);
+  }
+  .galleryPic {
+    height: 235px;
+    width: 80%;
+  }
+  .galDos {
+    bottom: 5px;
+    left: 40%;
+  }
+  .executiveTwo{
+    transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(-10deg);
+  }
+  .galDos, .gallery {
+    position: relative;
+  }
+  .galTres {
+    bottom: -100px;
+    position: relative;
+  }
+  .galTres {
+    margin-top: -100px;
+    transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(10deg);
+  }
+  .executiveThree{
+    transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(-10deg);
+  }
+  .serviceDescription{
+    color: #fff;
+    margin-top: 5%;
+    width: 40%;
+    margin-left: 15%;
+  }
+  .executiveDescription{
+    color: #fff;
+    margin-top: 5%;
+    width: 40%;
+    margin-left: 5%;
+  }
+  .dessertDescription{
+    color: #fff;
+    margin-top: 7%;
+    width: 40%;
+    margin-left: 10%;
+    line-height:2rem;
+  }
+  .serviceText{
+    list-style: none;
+    text-align: center;
+    line-height:1.7rem;
+  }
+  .contentText{
+    text-align: center;
+    color: #ffbd59;
+    font-size: larger;
+    margin-bottom: 2%;
+  }
+  .warning{
+    font-size: x-small;
+    text-align: justify;
+  }
+  
+  @media screen and (max-width: 600px){
+  .galery {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: auto;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 50px;
+      width: 90%;
+  }
+  }
+  @media screen and (min-width: 601px) and (max-width: 960px) {
+    .galleryPic {
+      height: 270px;
+      width: 100%;
+    }
+    .galTres {
+      bottom: -50px;
+  }
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 960px){
+    .galleryPic {
+      height: 270px;
+      width: 80%;
+    }
+    .galDos {
+      bottom: 50px;
+      left: 15%;
+    }
+  }
+  
