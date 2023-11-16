@@ -21,7 +21,7 @@ const collProducts = firebase.firestore().collection("products");
 
 const locationId = parseInt(window.location.href.split("?id=")[1]);
 
-let dataProducts = [];
+ let dataProducts = [];
 
 collProducts.get().then((res) => {
   const data = res.docs.map((doc) => ({
